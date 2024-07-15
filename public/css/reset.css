@@ -1,0 +1,161 @@
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+header,footer,div,section,article,nav,a,p,span,
+ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,
+img,dl,dt,dd,form,input,textarea{ box-sizing: border-box; }
+
+::selection { background: #ddd; }
+::-moz-selection { background: #ddd; }
+
+a{
+  text-decoration: none;
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer */
+  -khtml-user-select: none; /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none; /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none; /* Disable Android and iOS callouts*/
+}
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+	display: block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+h1,h2,h3,h4{ line-height: 1.5; }
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #ccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input,
+textarea,
+select,
+button {
+    vertical-align:middle;
+    
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    
+    max-width: 100%;
+    font-size: 100%;
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    outline: 0;
+}
+label {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=password],
+textarea,
+select,
+button,
+input[type=submit] {
+    border: 1px solid #bbb;
+    outline: 0;
+}
+::placeholder{
+    color: #bbb;
+}
+
+select,
+button,
+input[type=submit] {
+    cursor: pointer;
+}
+
+
+
+

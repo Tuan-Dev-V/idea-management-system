@@ -1,0 +1,430 @@
+html,body{
+  font-family: 'Noto Sans JP', 'Hiragino Sans' , 'ヒラギノ角ゴ ProN', Hiragino Kaku Gothic ProN, 'メイリオ', Meiryo, '游ゴシック Medium', YuGothic, YuGothicM, sans-serif;
+  font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #131112;
+	line-height: 1.63;
+}
+a{
+  color: #131112;
+  transition: opacity 0.3s, color 0.3s;
+}
+a:hover{ opacity: 0.7; }
+img,picture{
+	max-width: 100%;
+	display: block;
+}
+
+.blue{ color: #71ABD3; }
+.green{ color: #37BA93; }
+.red{ color: #DE4D74; }
+
+.bg-pale{ background: #F5F7FA; }
+
+.b-gray{ background: #EBEBEB; }
+.b-yellow{ background: #FCE435; }
+.b-bk{
+  background: #264459;
+  color: #fff;
+}
+.b-green{
+  background: #37BA93;
+  color: #fff;
+}
+.b-red{
+  background: #DE4D74;
+  color: #fff;
+}
+
+
+
+
+#wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.n-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 3.6rem;
+  border-radius: 0.8rem;
+  background: #71ABD3;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+.n-btn.b-wh{
+  background: #fff;
+  color: #71ABD3;
+  border: 1px solid;
+}
+.n-btn.w16{
+  width: 16rem;
+  height: 4.8rem;
+}
+
+
+.accttl{
+  position: relative;
+  z-index: 2;
+}
+.accttl + .accshow{
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-1rem);
+  transition: opacity 0.4s,transform 0.4s;
+  position: relative;
+  z-index: 3;
+}
+.accttl.active + .accshow{
+  opacity: 1;
+  pointer-events: unset;
+  transform: translateY(0);
+}
+.accttl + .accshow + .close-bg{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.accttl.active + .accshow + .close-bg{
+  display: block;
+}
+
+
+.nav-1,
+.nav-2{
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  z-index: 999;
+}
+.nav-2{
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  z-index: 998;
+}
+.nav-1{
+  top: 0;
+}
+.nav-2{
+  top: 6.4rem;
+}
+.nav-1 .content{
+  height: 6.4rem;
+  display: flex;
+  align-items: center;
+}
+.nav-1 a.logo{
+  display: block;
+  width: 20rem;
+}
+.nav-1 ul.nav-li{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.nav-1 ul.nav-li > li{
+  position: relative;
+}
+.nav-1 ul.nav-li > li + li{
+  margin-left: 2.5rem;
+}
+@media (min-width: 769px) and (max-width: 940px){
+.nav-1 ul.nav-li.tab-s > li{
+  font-size: 1.4rem;
+}
+.nav-1 ul.nav-li.tab-s > li + li{
+  margin-left: 1.6rem;
+}
+}
+.nav-1 ul.nav-li > li > a{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.nav-1 ul.nav-li > li > a img{
+  width: 2.4rem;
+}
+.nav-news .accttl{
+  display: block;
+  width: 3.6rem;
+  background: none;
+  border: none;
+}
+.nav-news .accttl img{
+  width: 100%;
+}
+.nav-news ul.accshow{
+  width: 23rem;
+  border-radius: 1.2rem;
+  background: #fff;
+  border: 1px solid #EAEAEA;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.16);
+  position: absolute;
+  right: 0;
+  top: 3.6rem;
+}
+.nav-news ul.accshow li{
+  padding: 1.6rem;
+  line-height: 1.4;
+}
+.nav-news ul.accshow li + li{
+  border-top: 1px solid #EAEAEA;
+}
+.nav-news ul.accshow li .date{
+  font-size: 1.4rem;
+  color: #91888D;
+  margin-top: 0.2em;
+}
+
+.nav-2 .content{
+  height: 7.4rem;
+  padding-top: 1.8rem;
+  display: flex;
+  align-items: center;
+}
+.nav-2 ul.nav-li{
+  display: flex;
+  height: 100%;
+}
+.nav-2 ul.nav-li li + li{
+  margin-left: 2.8rem;
+}
+.nav-2 ul.nav-li li a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-size: 2rem;
+}
+.nav-2 ul.nav-li li a.active{
+  font-weight: 700;
+  position: relative;
+}
+.nav-2 ul.nav-li li a.active::before{
+  content: "";
+  display: block;
+  width: 100%;
+  height: 0.4rem;
+  background: #71ABD3;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.nav-2 .btn-wrap{
+  display: flex;
+  gap: 1.2rem;
+  margin-left: auto;
+}
+
+.nav-2 a.back-btn{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.nav-2 a.back-btn::before{
+  content: "";
+  display: block;
+  width: 0.6rem;
+  height: 1.2rem;
+  background: url(../images/arrow-left.svg) center center no-repeat;
+  background-size: contain;
+  margin-right: 1.6rem;
+}
+.nav-2 .status-wrap{
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-left: auto;
+}
+.nav-2 .status-wrap .status{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10rem;
+  height: 3.6rem;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+.sec{
+  flex-grow: 1;
+  padding: 3.6rem 0 8rem;
+}
+
+
+.ttl-1{
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin-bottom: 2.6rem;
+}
+
+
+.ttl-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.6rem;
+}
+.ttl-wrap .ttl-1{
+  margin-bottom: 0;
+}
+
+
+
+
+/*　PC
+------------------------------------------------------------------------------------------------*/
+@media (min-width: 769px){
+.sp{ display: none !important; }
+
+html{ font-size: 10px; }
+body{ font-size: 1.6rem; }
+
+.content{
+  width: 100%;
+	max-width: 80rem;
+  padding: 0 4rem;
+	margin: 0 auto;
+}
+.content-w116 .content{
+  max-width: 124rem;
+}
+
+
+
+
+/*　タブレット
+------------------------------------------------------------------------------------------------*/
+@media (max-width: 800px){
+
+html{ font-size: 1.25vw; }
+
+
+
+
+}/*　タブレットここまで */
+}/*　PCここまで */
+
+
+
+
+/*　スマホ
+------------------------------------------------------------------------------------------------*/
+@media (max-width: 768px){
+.pc{ display: none !important; }
+
+html{ font-size: 2.6vw; }
+body{ font-size: 1.5rem; }
+
+.content{
+	width: 100%;
+	padding: 0 1.6rem;
+}
+
+
+.n-btn{
+  width: 8rem;
+  height: 3.2rem;
+  font-size: 1.4rem;
+}
+
+
+.nav-1 a.logo{
+  width: 16rem;
+}
+.nav-news ul.accshow li{
+  font-size: 1.4rem;
+}
+
+.nav-2 .content{
+  height: 5.8rem;
+  padding-top: 0.6rem;
+}
+.nav-2 ul.nav-li li + li{
+  margin-left: 1.4rem;
+}
+.nav-2 ul.nav-li li a{
+  font-size: 1.6rem;
+}
+
+.nav-2 a.back-btn{
+  font-size: 1.4rem;
+}
+.nav-2 a.back-btn::before{
+  margin-right: 1.2rem;
+}
+.nav-2 .status-wrap{
+  gap: 0.8rem;
+}
+.nav-2 .status-wrap .status{
+  width: 7rem;
+  height: 3.2rem;
+  font-size: 1.4rem;
+}
+
+.nav-3{
+  width: 100%;
+  height: 8.8rem;
+  background: #fff;
+  border-top: 1px solid #EAEAEA;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 997;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 1rem;
+}
+.nav-3 a{
+  display: block;
+  width: 3rem;
+}
+.nav-3 a.nav-plus{
+  width: 5.6rem;
+}
+.nav-3 a img{
+  width: 100%;
+}
+
+
+.sec{
+  padding: 2.6rem 0 6rem;
+}
+#wrapper:has( .nav-3) .sec{
+  padding-bottom: 12.8rem;
+}
+
+
+.ttl-1{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+.ttl-wrap{
+  margin-bottom: 2rem;
+}
+
+
+
+
+}/*　スマホここまで */
+
+
+
