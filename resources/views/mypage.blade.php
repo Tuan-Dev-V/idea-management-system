@@ -4,7 +4,7 @@
 <div class="content">
   <h2 class="ttl-1">マイページ</h2>
 
-  <form action="{{ route('mypage.update') }}" method="POST">
+  <form action="" method="POST">
     @csrf
     <label for="name">名前</label>
     <input type="text" name="name" value="{{ auth()->user()->name }}">
@@ -16,8 +16,8 @@
     <div class="btn-wrap">
       <input type="submit" value="変更内容を保存">
       <ul>
-        <li><a href="{{ route('password.edit') }}">パスワードを変更する</a></li>
-        <li><a href="{{ route('logout') }}">ログアウト</a></li>
+        <li><a href="">パスワードを変更する</a></li>
+        <li><a href="">ログアウト</a></li>
       </ul>
     </div>
   </form>
