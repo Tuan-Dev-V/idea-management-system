@@ -1,11 +1,7 @@
-@extends('layouts.layout')
+@extends('layouts.ceo')
 
 @section('content')
-<div class="idea-detail detail content-w116">
 
-  <div id="wrapper">
-
-    @include('layouts.nav')
 
     <nav class="nav-2">
       <div class="content">
@@ -110,12 +106,5 @@
       </div>
     </div>
     <!-- // モーダルウィンドウの中身 -->
-
-  </div><!-- wrapper -->
-
-
-  <!-- js -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="{{ asset('js/script.js') }}"></script>
 
 @endsection

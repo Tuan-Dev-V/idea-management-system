@@ -1,12 +1,9 @@
-@extends('layouts.app_ceo')
+@extends('layouts.ceo')
 
 @section('title', 'アイデア')
 
 @section('content')
 
-<div id="wrapper">
-
-  @include('common.ceo_sidebar')
 
   <div class="content">
     <div class="dash-box">
@@ -61,6 +58,5 @@
     </div>
   </div>
 
-</div><!-- wrapper -->
 
 @endsection
