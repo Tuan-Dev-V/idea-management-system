@@ -1,10 +1,8 @@
-@extends('layouts.app_ceo')
+@extends('layouts.ceo')
 
 @section('title', '傾向と分析')
 
 @section('content')
-
-<div id="wrapper">
 
 <nav class="nav-1">
   <div class="content">
@@ -160,17 +158,5 @@
       </ul>
     </div>
 
-	</div>
 </section>
-
-
-</div><!-- wrapper -->
-
-
-<!-- js -->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="{{ asset('js/script.js') }}"></script>
-
-
-</body>
-</html>
+@endsection
